@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,600&display=swap');
+
+$color-primary-dark: #1a1a1a;
+$color-primary-light: #404040;
+
+$bp-large: 62.4em;      // 1000px
+$bp-medium: 50em;       // 800px
+$bp-small: 31.25em;     // 500px
+$bp-vsmall: 18.75em;    // 300px
+
+*,
+I::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}

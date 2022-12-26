@@ -1,0 +1,76 @@
+.navbar {
+
+    margin: 3.5rem;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    
+    &__links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__link {
+        
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: $color-primary-light;
+            text-transform: uppercase;
+            margin: 1rem;
+
+            &:not(:last-child) { 
+                margin-right: 3rem;
+            }
+        }
+
+        &:hover {
+            border-bottom: 2px solid rgb(240, 166, 29);
+        }
+
+        &:active {
+            border-bottom: 2px solid rgb(240, 166, 29);
+        }
+    }
+
+    &__search {
+        margin: 3rem;
+        display: flex; 
+        justify-content: center;
+
+        &-input {
+            width: 40%;
+            outline: none;
+            font-family: inherit;
+            font-size: 1.6rem;    
+            color: inherit;
+            border: 2px solid rgb(197, 197, 197);
+            border-radius: 100px;
+            padding: 0.7rem 2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 60%;
+            }
+
+            @media only screen and (max-width: $bp-vsmall) {
+                width: 100%;
+            }
+
+        }
+
+        &-btn {
+            margin-left: -3rem;
+            background-color: $color-primary-light;
+            font-size: 1.6rem;
+            border: none;
+            padding: 0.8rem 2rem;
+            cursor: pointer;
+            font-family: inherit;
+            color: #fff;
+            border-radius: 100px;
+
+        }
+
+    }
+}

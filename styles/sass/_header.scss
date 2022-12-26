@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.09);
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-primary-dark;
+        }
+
+        & h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__buttons {
+
+        &-subscribe {
+            border: none;
+            border-radius: 10px;
+            font-size: 1.6rem;
+            padding: 1.5rem;
+            background-color: $color-primary-dark;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: $color-primary-light;
+            }
+
+            @media only screen and (max-width: 25em) {
+                display: none;
+            }
+        }
+    }
+}
