@@ -7,7 +7,7 @@ export default function NewsList({ news } : Props) {
 
 
     return (
-        <div className="news-item">
+        <div className="news__item">
             <img className="news__img" src={news.image} alt="image" />
             <h1 className="news__title">{news.title}</h1>
             <p className="news__content">{news.description}</p>

@@ -13,6 +13,7 @@ export default function SearchBox() {
 
         if (!input) return;
 
+        setInput("");
         router.push(`/search?keyword=${input}`);
     }
 
