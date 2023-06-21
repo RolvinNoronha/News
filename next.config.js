@@ -6,4 +6,10 @@ const nextConfig = {
   },
 }
 
+module.exports = {
+  env: {
+    MEDIASTACK_API_KEY: process.env.MEDIASTACK_API_KEY,
+  },
+};
+
 module.exports = nextConfig
