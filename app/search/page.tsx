@@ -5,7 +5,7 @@ export default async function Keywords({ searchParams }: { searchParams?: { [key
 
     const keyword = searchParams?.keyword;
         
-    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.MEDIASTACK_API_KEY}&keywords=${keyword}&languages=en&limit=100`)
+    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.NEXT_PUBLIC_MEDIASTACK_API_KEY}&keywords=${keyword}&languages=en&limit=100`)
     const data = await response.json();
 
     

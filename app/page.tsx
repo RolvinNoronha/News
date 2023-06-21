@@ -6,7 +6,7 @@ export default async function Home() {
 
 
 
-    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.MEDIASTACK_API_KEY}&languages=en&limit=50`)
+    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.NEXT_PUBLIC_MEDIASTACK_API_KEY}&languages=en&limit=50`)
     
     
     const data = await response.json();
