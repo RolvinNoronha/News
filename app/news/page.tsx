@@ -8,10 +8,10 @@ export default async function Categories({ searchParams }: { searchParams?: { [k
     const category = searchParams?.categories;
     
         
-    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=393d5cad34b1a234b40af0e2998524a1&categories=${category}&languages=en&limit=100`)
+    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=393d5cad34b1a234b40af0e2998524a1&categories=${!category ? "general" : category}&languages=en&limit=100`)
     const data = await response.json();
 
-    if (data === null) {
+    if (data === null || data === undefined) {
         return <FakeNews />
     }
 

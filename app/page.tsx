@@ -12,7 +12,7 @@ export default async function Home() {
     
     const data = await response.json();
 
-    if (data === null) {
+    if (data === null || data === undefined) {
         return <FakeNews />
     }
 

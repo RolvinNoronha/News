@@ -6,10 +6,10 @@ export default async function Keywords({ searchParams }: { searchParams?: { [key
 
     const keyword = searchParams?.keyword;
         
-    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=393d5cad34b1a234b40af0e2998524a1&keywords=${keyword}&languages=en&limit=100`)
+    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=393d5cad34b1a234b40af0e2998524a1&keywords=${!keyword ? "food industry" : keyword}&languages=en&limit=100`)
     const data = await response.json(); 
 
-    if (data === null) {
+    if (data === null || data === undefined) {
         return <FakeNews />
     }
 
