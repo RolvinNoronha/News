@@ -55,6 +55,11 @@ html {
   }
 }
 
+.fake_news_header {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
 .navbar {
   margin: 3.5rem;
   border-bottom: 1px solid rgb(179, 179, 179);

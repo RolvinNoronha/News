@@ -1,12 +1,17 @@
 import NewsList from "./NewsList";
 import sortNewsByImage from "../../lib/sortNewsByImage";
+import FakeNews from "../FakeNews";
 
 export default async function Keywords({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined }; }) {
 
     const keyword = searchParams?.keyword;
         
-    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${process.env.NEXT_PUBLIC_MEDIASTACK_API_KEY}&keywords=${keyword}&languages=en&limit=100`)
-    const data = await response.json();
+    const response = await fetch(`http://api.mediastack.com/v1/news?access_key=393d5cad34b1a234b40af0e2998524a1&keywords=${keyword}&languages=en&limit=100`)
+    const data = await response.json(); 
+
+    if (data === null) {
+        return <FakeNews />
+    }
 
     
     const newsWithImages = sortNewsByImage(data);
